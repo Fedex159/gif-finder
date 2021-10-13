@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { getGifs } from "../../actions";
+import { getGifs, setSearchState } from "../../actions";
 import { useState } from "react";
+import s from "./Search.module.css";
 
 function Search() {
   const dispatch = useDispatch();
@@ -11,19 +12,28 @@ function Search() {
     setValue(() => e.target.value);
   };
 
-  const onClick = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     (async () => {
       dispatch(await getGifs(value));
     })();
+    dispatch(setSearchState());
     setValue(() => "");
   };
 
   return (
-    <div>
-      <label>Search</label>
-      <input name="search" value={value} onChange={onChange} />
-      <button onClick={onClick}>Buscar</button>
+    <div className={s.container}>
+      <form onSubmit={onSubmit}>
+        <fieldset>
+          <button type="submit">B</button>
+          <input
+            name="search"
+            value={value}
+            onChange={onChange}
+            placeholder="Search..."
+          />
+        </fieldset>
+      </form>
     </div>
   );
 }

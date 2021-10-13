@@ -3,6 +3,8 @@ import env from "react-dotenv";
 import { mapGifs } from "../utils";
 
 export const GET_GIFS = "GetGifs";
+export const GET_TRENDING = "GetTrending";
+export const SEARCH_STATE = "SearchState";
 
 export const getGifs = async (name) => {
   try {
@@ -17,4 +19,25 @@ export const getGifs = async (name) => {
   } catch (e) {
     console.log("Error getGifs", e);
   }
+};
+
+export const getTrending = async () => {
+  try {
+    const response = await axios.get(
+      `https://api.giphy.com/v1/gifs/trending?api_key=${env.API_KEY}&limit=25&rating=g`
+    );
+    const results = mapGifs(response.data.data);
+    return {
+      type: GET_TRENDING,
+      payload: results,
+    };
+  } catch (e) {
+    console.log("Error getTrending", e);
+  }
+};
+
+export const setSearchState = () => {
+  return {
+    type: SEARCH_STATE,
+  };
 };

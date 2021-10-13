@@ -1,14 +1,16 @@
 .container {
   display: grid;
   grid-template-columns: 20px 8fr 20px;
-  grid-template-rows: 100px 400px 100px 1fr;
+  grid-template-rows: 100px 450px 100px 1fr 100px;
   grid-template-areas:
     ". buttons ."
     ". principal ."
     ". search ."
-    ". results .";
+    ". results ."
+    ". . .";
   min-height: 100vh;
-  background-color: rgb(2, 171, 250);
+  background-color: #4d1486;
+  width: 100vw;
 }
 
 .buttons {
@@ -18,18 +20,22 @@
 
 .principal {
   grid-area: principal;
-  background-color: blue;
+  background-color: #4d1486;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 10px;
 }
 
 .search {
   grid-area: search;
-  background-color: red;
+  background-color: #4d1486;
 }
 
 .results {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   grid-area: results;
   /* background-color: #1a202c; */
   background-color: #4d1486;

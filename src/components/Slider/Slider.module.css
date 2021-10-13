@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.container button {
+  background-color: #e701fb;
+  border-color: #e701fb;
+  transform: scale(2);
+  width: 20px;
+  border-radius: 50%;
+}
+
+.container button:hover {
+  cursor: pointer;
+}
+
+.containerList {
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 15px 1px #e701fb;
+  box-shadow: 0px 0px 15px 1px #e701fb;
+}
+
+.list {
+  display: flex;
+}

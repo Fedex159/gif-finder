@@ -1,8 +1,4 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   animation-name: scale;
   animation-duration: 0.2s;
 }

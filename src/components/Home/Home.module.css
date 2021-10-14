@@ -10,17 +10,18 @@
     ". . .";
   min-height: 100vh;
   background-color: #4d1486;
+  /* background-color: #1a202c; */
   width: 100vw;
 }
 
 .buttons {
   grid-area: buttons;
-  background-color: black;
+  /* background-color: #4d1486; */
 }
 
 .principal {
   grid-area: principal;
-  background-color: #4d1486;
+  /* background-color: #4d1486; */
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -29,7 +30,7 @@
 
 .search {
   grid-area: search;
-  background-color: #4d1486;
+  /* background-color: #4d1486; */
 }
 
 .results {
@@ -38,5 +39,5 @@
   align-items: baseline;
   grid-area: results;
   /* background-color: #1a202c; */
-  background-color: #4d1486;
+  /* background-color: #4d1486; */
 }

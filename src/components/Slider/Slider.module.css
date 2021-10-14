@@ -6,15 +6,14 @@
   gap: 25px;
 }
 
-.container button {
+.btn {
   background-color: #e701fb;
   border-color: #e701fb;
   transform: scale(2);
-  width: 20px;
   border-radius: 50%;
 }
 
-.container button:hover {
+.btn:hover {
   cursor: pointer;
 }
 

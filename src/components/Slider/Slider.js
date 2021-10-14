@@ -17,9 +17,10 @@ function Slider({ items }) {
   useEffect(() => {
     const handleResize = () => setViewWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
     if (TRANSLATE + 150 > viewWidth) {
-      setCount((prev) => prev - 1);
+      if (viewWidth > 360) {
+        setCount((prev) => prev - 1);
+      }
     } else if (TRANSLATE + WIDTH + GAP + 150 < viewWidth && count < 5) {
       setCount((prev) => prev + 1);
     }
@@ -52,6 +53,7 @@ function Slider({ items }) {
     <div className={s.container}>
       <button
         style={{ visibility: `${position === 0 ? "hidden" : "visible"}` }}
+        className={s.btn}
         onClick={onClickPrev}
       >
         {"❮"}
@@ -75,7 +77,13 @@ function Slider({ items }) {
         >
           {items.length ? (
             items.map((g) => (
-              <GifCard key={`${g.id}_${g.title}`} title={g.title} url={g.url} />
+              <GifCard
+                key={`${g.id}_${g.title}`}
+                title={g.title}
+                url={g.url}
+                favourite={g.favourite}
+                id={g.id}
+              />
             ))
           ) : (
             <NotResult />
@@ -85,6 +93,7 @@ function Slider({ items }) {
 
       <button
         style={{ visibility: `${!END ? "hidden" : "visible"}` }}
+        className={s.btn}
         onClick={onClickNext}
       >
         {"❯"}

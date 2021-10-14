@@ -5,6 +5,8 @@ import { mapGifs } from "../utils";
 export const GET_GIFS = "GetGifs";
 export const GET_TRENDING = "GetTrending";
 export const SEARCH_STATE = "SearchState";
+export const ADD_FAVOURITE = "AddFavourite";
+export const REMOVE_FAVOURITE = "RemoveFavourite";
 
 export const getGifs = async (name) => {
   try {
@@ -39,5 +41,19 @@ export const getTrending = async () => {
 export const setSearchState = () => {
   return {
     type: SEARCH_STATE,
+  };
+};
+
+export const addFavourite = (payload) => {
+  return {
+    type: ADD_FAVOURITE,
+    payload: payload,
+  };
+};
+
+export const removeFavourite = (payload) => {
+  return {
+    type: REMOVE_FAVOURITE,
+    payload: payload,
   };
 };

@@ -7,15 +7,15 @@
 
 .container div {
   font-size: x-large;
-  background-color: goldenrod;
+  background-color: var(--btn-nav-back);
   padding: 8px;
   border-radius: 5px;
 }
 
 .container div:hover {
   cursor: pointer;
-  background-color: black;
-  color: goldenrod;
-  -webkit-box-shadow: 0px 0px 6px 1px black;
-  box-shadow: 0px 0px 6px 1px black;
+  background-color: var(--btn-nav-color);
+  color: var(--btn-nav-back);
+  -webkit-box-shadow: 0px 0px 6px 1px var(--nav-shadow);
+  box-shadow: 0px 0px 6px 1px var(--nav-shadow);
 }

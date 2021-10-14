@@ -24,15 +24,17 @@ function GifCard({ title, url, favourite, id }) {
 
   return (
     <div className={s.container} style={{ width: `${WIDTH}px` }}>
-      <img src={url} alt={title} style={{ width: `${WIDTH}px` }} />
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <img src={url} alt={title} style={{ width: `${WIDTH}px` }} />
+      </a>
       <h3>{title.length > 1 ? title : "Gif"}</h3>
-      <button
+      <div
         onClick={onClick}
         className={s.btnFav}
-        style={{ color: `${favourite ? "pink" : "black"}` }}
+        style={{ color: `${favourite ? "var(--fav-on)" : "var(--fav-off)"}` }}
       >
         {favourite ? "❤" : "♡"}
-      </button>
+      </div>
     </div>
   );
 }

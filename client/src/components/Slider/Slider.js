@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { WIDTH } from "../GifCard/GifCard";
 import NotResult from "../NotResult/NotResult";
 
-function Slider({ items }) {
+function Slider({ items, fav }) {
   const [position, setPosition] = useState(0);
   const [count, setCount] = useState(5);
   const [viewWidth, setViewWidth] = useState(window.innerWidth);
@@ -51,13 +51,13 @@ function Slider({ items }) {
 
   return (
     <div className={s.container}>
-      <button
+      <div
         style={{ visibility: `${position === 0 ? "hidden" : "visible"}` }}
         className={s.btn}
         onClick={onClickPrev}
       >
         {"❮"}
-      </button>
+      </div>
       <div
         className={s.containerList}
         style={{
@@ -86,18 +86,18 @@ function Slider({ items }) {
               />
             ))
           ) : (
-            <NotResult />
+            <NotResult fav={fav} />
           )}
         </div>
       </div>
 
-      <button
+      <div
         style={{ visibility: `${!END ? "hidden" : "visible"}` }}
         className={s.btn}
         onClick={onClickNext}
       >
         {"❯"}
-      </button>
+      </div>
     </div>
   );
 }

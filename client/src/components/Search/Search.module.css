@@ -13,33 +13,33 @@
 
 .container fieldset {
   display: flex;
-  width: 30%;
+  width: 564px;
   padding: 0;
   border: none;
   transform: scale(1.5);
 }
 
 .container fieldset:focus-within {
-  -webkit-box-shadow: 0px 0px 15px 1px #e701fb;
-  box-shadow: 0px 0px 15px 1px #e701fb;
+  -webkit-box-shadow: 0px 0px 15px 1px var(--shadow-background);
+  box-shadow: 0px 0px 15px 1px var(--shadow-background);
 }
 
 .container input {
   width: 100%;
-  background-color: #00000038;
+  background-color: var(--input-back);
   border: none;
-  color: goldenrod;
+  color: var(--font-color);
   font-weight: bold;
   padding: 5px;
 }
 
 .container input:focus {
   outline: none;
-  caret-color: blueviolet;
+  caret-color: var(--font-color);
 }
 
 .container ::placeholder {
-  color: goldenrod;
+  color: var(--font-color);
   font-style: oblique;
 }
 
@@ -49,7 +49,7 @@
   background-size: 15px;
   background-position: center;
   color: transparent;
-  background-color: #00000038;
+  background-color: var(--input-back);
   border: none;
   padding: 5px 5px 5px 15px;
 }

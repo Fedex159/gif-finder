@@ -8,11 +8,13 @@
 }
 
 .container h2 {
+  --text: var(--text-shadow-color);
   margin-top: 0;
-  color: goldenrod;
+  color: var(--font-color);
   font-size: xx-large;
-  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
-    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  text-shadow: 2px 0 0 var(--text), -2px 0 0 var(--text), 0 2px 0 var(--text),
+    0 -2px 0 var(--text), 1px 1px var(--text), -1px -1px 0 var(--text),
+    1px -1px 0 var(--text), -1px 1px 0 var(--text);
 }
 
 @keyframes scale {

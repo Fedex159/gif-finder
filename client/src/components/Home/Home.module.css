@@ -3,25 +3,26 @@
   grid-template-columns: 20px 8fr 20px;
   grid-template-rows: 100px 450px 100px 1fr 100px;
   grid-template-areas:
-    ". buttons ."
+    "colors buttons ."
     ". principal ."
     ". search ."
     ". results ."
     ". . .";
   min-height: 100vh;
-  background-color: #4d1486;
-  /* background-color: #1a202c; */
+  background-color: var(--background);
   width: 100vw;
 }
 
 .buttons {
   grid-area: buttons;
-  /* background-color: #4d1486; */
+}
+
+.colors {
+  grid-area: colors;
 }
 
 .principal {
   grid-area: principal;
-  /* background-color: #4d1486; */
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -30,7 +31,6 @@
 
 .search {
   grid-area: search;
-  /* background-color: #4d1486; */
 }
 
 .results {
@@ -38,6 +38,4 @@
   justify-content: center;
   align-items: baseline;
   grid-area: results;
-  /* background-color: #1a202c; */
-  /* background-color: #4d1486; */
 }

@@ -1,10 +1,17 @@
 .container {
-  background-image: url("../../imgs/no-results-found.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   margin-right: 5px;
-  filter: invert(1) sepia(1) saturate(295) hue-rotate(300deg);
-  background-color: #00000007;
+  filter: var(--filter);
+  background-color: var(--result-back);
+}
+
+.default {
+  background-image: url("../../imgs/no-results-found.png");
+}
+
+.fav {
+  background-image: url("../../imgs/no\ favorite.png");
 }

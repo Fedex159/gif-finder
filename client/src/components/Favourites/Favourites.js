@@ -9,7 +9,7 @@ function Favourites() {
   return (
     <div className={s.container}>
       <h2>Favourites</h2>
-      <Slider items={favourites} />
+      <Slider items={favourites} fav={true} />
     </div>
   );
 }

@@ -14,11 +14,13 @@ function Search() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    (async () => {
-      dispatch(await getGifs(value));
-    })();
-    dispatch(setSearchState());
-    setValue(() => "");
+    if (value) {
+      (async () => {
+        dispatch(await getGifs(value));
+      })();
+      dispatch(setSearchState());
+      setValue(() => "");
+    }
   };
 
   return (

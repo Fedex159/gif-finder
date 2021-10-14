@@ -4,13 +4,13 @@
   align-items: center;
   height: 300px;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.15);
-  color: rgb(251, 192, 0);
+  background-color: var(--card-back);
+  color: var(--font-color-card);
 }
 
 .container:hover {
-  -webkit-box-shadow: 0px 0px 6px 1px purple;
-  box-shadow: 0px 0px 6px 1px purple;
+  -webkit-box-shadow: 0px 0px 6px 1px var(--shadow-background);
+  box-shadow: 0px 0px 6px 1px var(--shadow-background);
   transform: translate3d(0, -4px, 0);
   transition: 0.2s ease-out;
 }
@@ -26,16 +26,18 @@
 }
 
 .btnFav {
+  width: 20px;
+  padding: 5px;
+  text-align: center;
   margin-top: auto;
   margin-bottom: 15px;
-  transform: scale(1.5);
-  background-color: #dc2be2;
+  transform: scale(1.2);
+  background-color: var(--btn-background);
   border-radius: 50%;
-  border-color: #dc2be2;
 }
 
 .btnFav:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 6px 1px purple;
-  box-shadow: 0px 0px 6px 1px purple;
+  -webkit-box-shadow: 0px 0px 6px 1px var(--shadow-background);
+  box-shadow: 0px 0px 6px 1px var(--shadow-background);
 }

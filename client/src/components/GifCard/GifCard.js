@@ -27,7 +27,13 @@ function GifCard({ title, url, favourite, id }) {
       <a href={url} target="_blank" rel="noopener noreferrer">
         <img src={url} alt={title} style={{ width: `${WIDTH}px` }} />
       </a>
-      <h3>{title.length > 1 ? title : "Gif"}</h3>
+      <h3>
+        {title.length > 1
+          ? title.length > 30
+            ? title.substring(0, 30) + "..."
+            : title
+          : "Gif"}
+      </h3>
       <div
         onClick={onClick}
         className={s.btnFav}

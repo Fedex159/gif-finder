@@ -7,14 +7,22 @@ import Favourites from "../Favourites/Favourites";
 import NavBar from "../NavBar/NavBar";
 import Colors from "../Colors/Colors";
 import colors from "../../utils/variables";
+import StartScreen from "../StartScreen/StartScreen";
 import { useState } from "react";
 
 function Home() {
   const [showFav, setShowFav] = useState(false);
   const [color, setColor] = useState("black");
+  const [showStart, setShowStart] = useState(true);
 
   return (
     <div className={s.container} style={colors[color]}>
+      <div
+        className={s.startScreen}
+        style={showStart ? { zIndex: "2" } : { zIndex: "-1" }}
+      >
+        {showStart ? <StartScreen setShowStart={setShowStart} /> : null}
+      </div>
       <div className={s.colors}>
         <Colors setColor={setColor} />
       </div>

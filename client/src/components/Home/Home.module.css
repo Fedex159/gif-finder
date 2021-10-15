@@ -12,6 +12,11 @@
   background-color: var(--background);
   width: 100vw;
 }
+.startScreen {
+  grid-area: buttons;
+  grid-row-end: 6;
+  grid-column-end: 4;
+}
 
 .buttons {
   grid-area: buttons;

@@ -8,7 +8,7 @@ export const REMOVE_FAVOURITE = "RemoveFavourite";
 
 export const getGifs = async (name) => {
   try {
-    const response = await axios.get(`http://localhost:3001/gifs?name=${name}`);
+    const response = await axios.get(`/gifs?name=${name}`);
     return {
       type: GET_GIFS,
       payload: response.data,
@@ -20,7 +20,7 @@ export const getGifs = async (name) => {
 
 export const getTrending = async () => {
   try {
-    const response = await axios.get(`http://localhost:3001/gifs`);
+    const response = await axios.get(`/gifs`);
     return {
       type: GET_TRENDING,
       payload: response.data,

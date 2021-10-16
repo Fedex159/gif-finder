@@ -18,9 +18,13 @@ function Slider({ items, fav }) {
     const handleResize = () => setViewWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     if (TRANSLATE + 150 > viewWidth) {
-      if (viewWidth > 360) {
-        setCount((prev) => prev - 1);
-      }
+      setCount((prev) => {
+        if (viewWidth > 360) {
+          return prev - 1;
+        } else {
+          return 1;
+        }
+      });
     } else if (TRANSLATE + WIDTH + GAP + 150 < viewWidth && count < 5) {
       setCount((prev) => prev + 1);
     }

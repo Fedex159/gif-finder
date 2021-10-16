@@ -5,7 +5,7 @@ const axios = require("axios");
 function mapGifs(array) {
   return array.map((gif) => ({
     id: gif.id,
-    url: gif.images.original.url,
+    url: gif.images.original.webp,
     title: gif.title,
   }));
 }
